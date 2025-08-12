@@ -1,0 +1,247 @@
+<!--
+  Shahrukh Nasir - Digital Marketer
+  File: index.html
+  Drop this file into your GitHub repo as index.html (shahrukh007-mk.github.io)
+  To change text/images: open this file and edit the content directly
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shahrukh Nasir — Digital Marketer</title>
+  <meta name="description" content="Shahrukh Nasir — Certified digital marketer, Meta Ads specialist. Growth-focused campaigns and creative strategies." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1320; --muted:#94a3b8; --accent:#7c3aed; --accent-2:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --max:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,var(--bg),#071226 120%); color:#e6eef8;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.5;
+    }
+    .container{max-width:var(--max);margin:28px auto;padding:24px}
+
+    /* Header / Nav */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:18px;box-shadow:0 6px 24px rgba(12,10,20,0.6)}
+    .brand h1{margin:0;font-size:18px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+    nav a:hover{color:white;background:rgba(255,255,255,0.03)}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:28px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:36px;border-radius:16px;box-shadow:0 8px 32px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:0.6px;text-transform:uppercase;font-size:12px}
+    .title{font-size:34px;margin:10px 0 6px}
+    .lead{color:var(--muted);margin:0 0 18px}
+    .actions{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#5b21b6);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Right card (profile) */
+    .profile{padding:22px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;flex-direction:column;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:18px;background:linear-gradient(135deg,#111827,#0b1220);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:800}
+    .role{color:var(--muted);margin-top:12px}
+    .kpis{display:flex;gap:12px;margin-top:16px}
+    .kpi{background:var(--glass);padding:10px 12px;border-radius:10px;text-align:center}
+    .kpi strong{display:block;font-size:18px}
+
+    /* Sections */
+    section{margin-top:36px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+    .card h3{margin:0 0 6px}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .preview{height:160px;border-radius:8px;background:#071330;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+
+    /* About and Contact */
+    .about{display:flex;gap:18px;align-items:flex-start}
+    .about p{color:var(--muted)}
+    .contact-card{padding:20px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    .contact-card a{display:inline-block;margin-top:10px}
+
+    footer{margin:36px 0;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsiveness */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+      nav{display:none}
+    }
+    @media (max-width:520px){
+      .cards{grid-template-columns:1fr}
+      .portfolio-grid{grid-template-columns:1fr}
+      .logo{width:46px;height:46px;font-size:16px}
+      .title{font-size:26px}
+    }
+
+    /* small animations */
+    .fadeIn{animation:fade .9s ease both}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    .glass-border{border:1px solid rgba(255,255,255,0.03)}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SN</div>
+        <div>
+          <h1>Shahrukh Nasir</h1>
+          <div style="color:var(--muted);font-size:13px">Digital Marketer & Meta Ads Specialist</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Work with me</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-card fadeIn">
+          <div class="eyebrow">Growth-focused ads & strategy</div>
+          <h2 class="title">I help brands scale with data-driven Meta & paid media campaigns</h2>
+          <p class="lead">Performance-first marketing, creative testing, funnel optimization and clear ROI reporting. I run campaigns that grow revenue and lower customer acquisition cost.</p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Book a call</a>
+            <a class="btn btn-ghost" href="#portfolio">See my work</a>
+          </div>
+
+          <div style="margin-top:22px;color:var(--muted);font-size:14px">
+            <strong>Specialities</strong>
+            <div style="margin-top:8px">Meta Ads · Creatives Strategy · Landing Page CRO · WhatsApp Commerce</div>
+          </div>
+        </div>
+
+        <aside class="profile glass-border fadeIn">
+          <div class="avatar">SN</div>
+          <div style="margin-top:12px;font-weight:700">Shahrukh Nasir</div>
+          <div class="role">Certified Social Media Marketer · Meta</div>
+
+          <div class="kpis">
+            <div class="kpi"><strong>3x</strong><span style="color:var(--muted)">avg ROAS</span></div>
+            <div class="kpi"><strong>120+</strong><span style="color:var(--muted)">campaigns</span></div>
+            <div class="kpi"><strong>50+</strong><span style="color:var(--muted)">clients</span></div>
+          </div>
+
+          <div style="margin-top:14px;width:100%">
+            <div style="display:flex;gap:8px">
+              <a class="btn btn-primary" href="mailto:hello@yourdomain.com">Email me</a>
+              <a class="btn btn-ghost" href="https://wa.me/923120574640" target="_blank">WhatsApp</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Services -->
+      <section id="services">
+        <h2>Services</h2>
+        <div class="cards">
+          <div class="card fadeIn">
+            <h3>Meta Ads Management</h3>
+            <p class="lead">Full-funnel campaigns, audience research, creative testing and weekly reporting to maximize ROI.</p>
+          </div>
+          <div class="card fadeIn">
+            <h3>Creative & Copy</h3>
+            <p class="lead">Ads scripts, thumbnails, short-form video concepts and A/B tested hooks that convert.</p>
+          </div>
+          <div class="card fadeIn">
+            <h3>Growth & Funnels</h3>
+            <p class="lead">Landing page CRO, email flows, and WhatsApp remarketing to keep CAC low and scale profits.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p class="lead">Selected campaigns and creative tests. Replace these placeholders with your screenshots or case studies.</p>
+        <div class="portfolio-grid" style="margin-top:12px">
+          <div class="preview">Campaign A — +42% sales</div>
+          <div class="preview">Campaign B — -31% CAC</div>
+          <div class="preview">Creative Test — 3.2x ROAS</div>
+          <div class="preview">Landing Page — +18% CVR</div>
+          <div class="preview">E‑commerce — +50% revenue</div>
+          <div class="preview">Local Brand — WhatsApp Sales</div>
+        </div>
+      </section>
+
+      <!-- About & Contact -->
+      <section class="about" id="about">
+        <div style="flex:1">
+          <h2>About me</h2>
+          <p>I’m a performance-focused digital marketer with experience running paid social campaigns, managing creative production, and optimizing funnels for measurable growth. I blend analytics and creative testing to lower CAC and scale sustainable revenue.</p>
+
+          <p style="margin-top:12px">Certifications: Meta Certified Social Media Marketing (mention other certs). Based in Rawalpindi. Available for remote and local clients.</p>
+        </div>
+
+        <div style="width:380px">
+          <div class="contact-card">
+            <h3>Get in touch</h3>
+            <p class="lead">Quick contact options — I respond fast on WhatsApp.</p>
+            <a class="btn btn-primary" href="https://wa.me/923120574640" target="_blank">Message on WhatsApp</a>
+            <a class="btn btn-ghost" href="mailto:hello@yourdomain.com">Email: hello@yourdomain.com</a>
+
+            <div style="margin-top:14px;color:var(--muted);font-size:13px">Or fill a short message:</div>
+            <form id="contactForm" style="margin-top:8px;display:flex;flex-direction:column;gap:8px" onsubmit="handleForm(event)">
+              <input id="name" required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+              <input id="email" type="email" required placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+              <textarea id="message" required placeholder="Short message / inquiry" rows="3" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </form>
+            <div id="formNote" style="margin-top:10px;color:var(--muted);font-size:13px">This form will open your email client. Replace it with a backend or Formspree for server-side sending.</div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> Shahrukh Nasir · Digital Marketing · <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Website inquiry from ' + name);
+      const body = encodeURIComponent(message + '\n\nContact: ' + name + ' — ' + email);
+      window.location.href = 'mailto:hello@yourdomain.com?subject='+subject+'&body='+body;
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+  </script>
+</body>
+</html>
